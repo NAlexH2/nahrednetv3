@@ -2,7 +2,7 @@ export const About = () => {
   return (
     <>
       <h1>
-        <a href="/">HOME</a>
+        <link href="/">HOME</link>
       </h1>
       <div>Hello</div>
     </>

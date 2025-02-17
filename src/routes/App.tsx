@@ -10,7 +10,7 @@ export const App = () => {
     <>
       <div>
         <h1>
-          <a href="/about">ABOUT</a>
+          <link href="/about">ABOUT</link>
         </h1>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
