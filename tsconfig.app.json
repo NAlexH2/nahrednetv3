@@ -28,6 +28,12 @@
       "@/*": [
         "src/*"
       ],
+      "@public/*": [
+        "src/public"
+      ],
+      "@images/*": [
+        "src/public/images"
+      ],
       "@routes/*": [
         "src/routes/*"
       ],
