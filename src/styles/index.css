@@ -1,14 +1,35 @@
 @import "tailwindcss";
 
+/* Plaintext Font */
+@font-face {
+  font-family: "Josefin";
+  src: local("JosefinSans-Italic-VariableFont_wght");
+  src: local("JosefinSans-VariableFont_wght");
+  src: url("../assets/fonts/Josefin_Sans/JosefinSans-Italic-VariableFont_wght.ttf");
+  src: url("../assets/fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf");
+  style: "normal" "italic";
+}
+
+/* Curly Font */
+@font-face {
+  font-family: "Squarepeg";
+  src: local("SquarePeg-Regular");
+  src: url("../assets/fonts/Square_Peg/SquarePeg-Regular.ttf");
+}
+
 :root {
+  --josefin: Josefin;
+  --squarepeg: Squarepeg;
   color: rgba(255, 255, 255, 0.87);
   background-color: #000000;
+  font-family: var(--josefin);
 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* 
 a {
   font-weight: 500;
   color: #646cff;
@@ -61,4 +82,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
