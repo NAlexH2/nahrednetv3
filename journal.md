@@ -8,4 +8,4 @@
   - `vite-tsconfig-paths` and added it to `vite.config.ts`. This automates the alias transfer from `tsconfig.app.json` making life easier.
 - Want to have the auto includes when referencing objects to use the alias vs relative path.
   - As it stands right now, VSCode will automatically use relative paths
-  - I would like it to use the alias (if it exists)
+  - I would like it to use the alias (if the alias exists) instead of the relative path.
