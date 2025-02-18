@@ -28,14 +28,17 @@
       "@/*": [
         "src/*"
       ],
+      "@/styles/*": [
+        "src/styles/*"
+      ],
       "@assets/*": [
-        "src/assets"
+        "src/assets/*"
       ],
       "@images/*": [
-        "src/assets/images"
+        "src/assets/images/*"
       ],
       "@fonts/*": [
-        "src/assets/fonts"
+        "src/assets/fonts/*"
       ],
       "@routes/*": [
         "src/routes/*"
