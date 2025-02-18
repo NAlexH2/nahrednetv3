@@ -1,0 +1,12 @@
+:root {
+  --toasted-almond: #eed5bf;
+  --transparent-almond: #ffc0896c;
+  --white: white;
+  --honey: rgb(255, 196, 0);
+  --ocean-slate-light: #45738a;
+}
+
+#navBarBtn:hover {
+  cursor: pointer;
+  text-shadow: 2px 2px 1px rgb(0, 0, 0);
+}

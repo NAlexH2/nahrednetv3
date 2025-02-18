@@ -17,11 +17,20 @@
   src: url("../assets/fonts/Square_Peg/SquarePeg-Regular.ttf");
 }
 
+@theme {
+  --color-toasted-almond: #eed5bf;
+  --color-transparent-almond: #ffc0896c;
+  --color-white: white;
+  --color-honey: rgb(255, 196, 0);
+  --color-ocean-slate-light: #45738a;
+}
+
 :root {
   --josefin: Josefin;
   --squarepeg: Squarepeg;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #000000;
+
+  color: rgba(0, 0, 0, 0.87);
+  background-color: var(--transparent-almond);
   font-family: var(--josefin);
 
   text-rendering: optimizeLegibility;

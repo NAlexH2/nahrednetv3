@@ -1,4 +1,5 @@
-import {Home} from "./Home"
-import {About} from "./About"
+import Bio from "./bio";
+import Experience from "./experience"
+import Projects from "./projects";
 
-export {Home, About};
+export {Bio, Experience, Projects};
