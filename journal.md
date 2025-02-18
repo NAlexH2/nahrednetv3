@@ -9,3 +9,7 @@
 - Want to have the auto includes when referencing objects to use the alias vs relative path.
   - As it stands right now, VSCode will automatically use relative paths
   - I would like it to use the alias (if the alias exists) instead of the relative path.
+
+## Later that day
+- I got everything setup how I like it, and have started making slow progress. I am not a fan of the style currently, but we'll see.
+- The build fails when trying to go to AWS or Render.com for some reason. The aliases I have setup don't seem to be working properly or playing nice once it goes to get built on another location.
