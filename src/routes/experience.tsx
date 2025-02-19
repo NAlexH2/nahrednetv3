@@ -1,4 +1,4 @@
-import NavBar from "@/components/navbar/navBar";
+import NavBar from "@/components/navbar/NavBar";
 
 export const Experience = () => {
   const routedPage: string = "Experience";

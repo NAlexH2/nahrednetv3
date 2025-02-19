@@ -1,5 +1,5 @@
-import NavBarBtn from "@buttons/navBarBtn";
 import { Link } from "react-router-dom";
+import { NavBarBtn } from "@buttons/NavBarBtn";
 import { navBarItems } from "./navItemConsts";
 
 const RouteDecider = (item: string): string => {

@@ -1,4 +1,3 @@
-import NavBarBtn from "./navBarBtn";
-
+import NavBarBtn from "./NavBarBtn";
 
 export {NavBarBtn};

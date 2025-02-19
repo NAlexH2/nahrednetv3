@@ -1,5 +1,5 @@
 // import "@/styles/home.css"; TODO - not used currently (ever?)
-import NavBar from "@/components/navbar/navBar";
+import NavBar from "@/components/navbar/NavBar";
 
 export const Bio = () => {
   const routedPage: string = "Bio";

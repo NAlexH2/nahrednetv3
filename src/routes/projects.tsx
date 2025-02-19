@@ -1,4 +1,4 @@
-import { NavBar } from "@/components/navbar/navBar";
+import NavBar from "@/components/navbar/NavBar";
 
 export const Projects = () => {
   const routedPage: string = "Projects";
