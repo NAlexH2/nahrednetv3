@@ -18,19 +18,26 @@
 }
 
 @theme {
-  --color-toasted-almond: #eed5bf;
-  --color-transparent-almond: #ffc0896c;
+  --color-toasted-almond: rgb(238, 213, 191);
+  --color-transparent-almond: rgba(255, 192, 137, 0.424);
   --color-white: white;
   --color-honey: rgb(255, 196, 0);
-  --color-ocean-slate-light: #45738a;
+  --color-ocean-slate-light: rgb(69, 115, 138);
+  --color-algae-green: rgb(117, 160, 105);
 }
 
 :root {
+  --toasted-almond: rgb(238, 213, 191);
+  --transparent-almond: rgba(255, 192, 137, 0.424);
+  --white: white;
+  --honey: rgb(255, 196, 0);
+  --ocean-slate: rgb(69, 115, 138);
+  --ocean-slate-light: rgb(175, 210, 241);
   --josefin: Josefin;
   --squarepeg: Squarepeg;
 
-  color: rgba(0, 0, 0, 0.87);
-  background-color: var(--transparent-almond);
+  color: var(--honey);
+  background-color: rgb(0, 0, 0);
   font-family: var(--josefin);
 
   text-rendering: optimizeLegibility;

@@ -16,7 +16,7 @@ export const NavBar = ({ routedPage = "" }: { routedPage: string }) => {
             key={index}
             routedPage={routedPage}
             btnText={item}
-            className="flex-row text-4xl"
+            className="flex-row"
           />
         </Link>
       ))}
