@@ -1,11 +1,12 @@
-// import "@/styles/home.css"; TODO - not used currently (ever?)
+import Header from "@/components/header/Header";
 import NavBar from "@/components/navbar/NavBar";
 
 export const Bio = () => {
   const routedPage: string = "Bio";
 
   return (
-    <div className="mt-3">
+    <div>
+      <Header />
       <NavBar routedPage={routedPage} />
       bio
     </div>

@@ -18,17 +18,18 @@
 }
 
 @theme {
-  --color-toasted-almond: rgb(238, 213, 191);
-  --color-transparent-almond: rgba(255, 192, 137, 0.424);
+  --color-toasted-almond: rgba(255, 192, 137, 0.424);
+  --color-transparent-almond: rgb(238, 213, 191);
   --color-white: white;
   --color-honey: rgb(255, 196, 0);
   --color-ocean-slate-light: rgb(69, 115, 138);
   --color-algae-green: rgb(117, 160, 105);
+  --font-squarepeg: "Squarepeg";
 }
 
 :root {
-  --toasted-almond: rgb(238, 213, 191);
-  --transparent-almond: rgba(255, 192, 137, 0.424);
+  --toasted-almond: rgba(255, 192, 137, 0.424);
+  --transparent-almond: rgb(238, 213, 191);
   --white: white;
   --honey: rgb(255, 196, 0);
   --ocean-slate: rgb(69, 115, 138);
@@ -43,6 +44,18 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+link:hover {
+  cursor: pointer;
+}
+
+hr {
+  background-color: var(--honey);
 }
 
 /* 

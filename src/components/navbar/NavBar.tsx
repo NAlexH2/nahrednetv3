@@ -9,14 +9,14 @@ const RouteDecider = (item: string): string => {
 
 export const NavBar = ({ routedPage = "" }: { routedPage: string }) => {
   return (
-    <nav className="flex justify-center mt-3">
+    <nav className="flex justify-center">
       {navBarItems.map((item, index) => (
-        <Link to={RouteDecider(item)} className="ml-4 mr-4">
+        <Link to={RouteDecider(item)} key={index} className="ml-4 mr-4">
           <NavBarBtn
             key={index}
             routedPage={routedPage}
             btnText={item}
-            className="flex-row"
+            className="text-5xl"
           />
         </Link>
       ))}

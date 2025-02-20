@@ -11,17 +11,12 @@ interface MButtonProps {
 }
 const navBarBtn = "navBarBtn";
 const activeBtn: string = `${ClassStyles.activeNavBtn} bg-clip-text \
-  text-white underline decoration-5 decoration-toasted-almond decoration-3 font-bold \
-  text-4xl`;
-// \
-// transition-all duration-500 bg-linear-to-t from-honey from-[90%] \
-// to-ocean-slate-light `;
+  text-white underline decoration-5 decoration-transparent-almond decoration-3 \
+  font-bold`;
 
 const nonActiveBtn: string = `${ClassStyles.notActiveNavBtn} \
-  bg-clip-text text-toasted-almond decoration-5 underline decoration-honey decoration-3 \
-  font-bold text-4xl`;
-// transition-all duration-500 bg-linear-to-t \
-// from-transparent-almond from-[90%] to-ocean-slate-light text-4xl`;
+  bg-clip-text text-transparent-almond decoration-5 underline decoration-honey \
+  decoration-3 font-bold`;
 
 export const NavBarBtn = (prop: MButtonProps) => {
   const [isAct, setIsAct] = useState(false);
