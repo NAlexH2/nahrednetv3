@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { HeaderLogo } from "./HeaderLogo";
-import { HeaderText } from "./HeaderText";
+import { HeaderLogo } from "./TopBannerLogo";
+import { HeaderText } from "./TopBannerText";
 import IDStyles from "@/styles/IDStyles.module.css";
 
 export const Header = () => {
