@@ -49,6 +49,9 @@
       "@buttons/*": [
         "src/components/buttons/*"
       ],
+      "@utils/*": [
+        "src/utils/*"
+      ],
     }
   },
   "include": [
