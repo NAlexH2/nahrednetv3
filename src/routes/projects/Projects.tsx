@@ -1,4 +1,3 @@
-import Header from "@/components/header/Header";
 import NavBar from "@/components/navbar/NavBar";
 
 export const Projects = () => {
@@ -6,7 +5,6 @@ export const Projects = () => {
 
   return (
     <div className="m-5">
-      <Header />
       <NavBar routedPage={routedPage} />
       projects
     </div>

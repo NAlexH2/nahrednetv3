@@ -1,4 +1,4 @@
-import { MouseEventHandler, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import IDStyles from "@/styles/IDStyles.module.css";
 
 interface MButtonProps {
@@ -6,8 +6,6 @@ interface MButtonProps {
   routedPage: string;
   textClassName?: string;
   id?: string;
-  onClick?: MouseEventHandler;
-  children?: React.ReactNode;
 }
 const activeBtn: string = `text-jade underline decoration-5 \
 decoration-tp-almond decoration-3`;
