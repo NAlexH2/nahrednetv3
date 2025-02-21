@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { HeaderLogo } from "./HeaderLogo";
 import { HeaderText } from "./HeaderText";
-import { IDStyles } from "@/styles";
+import IDStyles from "@/styles/IDStyles.module.css";
 
 export const Header = () => {
   const homeUrl = "/";
