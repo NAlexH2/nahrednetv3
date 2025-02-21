@@ -1,5 +1,13 @@
 # Table of Contents
+- [Table of Contents](#table-of-contents)
+- [2/20/2025](#2202025)
+- [2/17/2025](#2172025)
+  - [Later that day](#later-that-day)
 
+
+# 2/20/2025
+- The build is failing again and I cannot remember what I did to fix it. I might need to add an index file to header.
+- Everything else works great and looks great so far though!
 
 # 2/17/2025
 - Got aliases working (see the chain in `tsconfig.app.json`)
