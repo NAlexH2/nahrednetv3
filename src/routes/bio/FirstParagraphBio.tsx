@@ -1,4 +1,4 @@
-import { IDStyles } from "@/styles";
+import IDStyles from "@/styles/IDStyles.module.css";
 import { Link } from "react-router-dom";
 
 export const FirstParagraphBio = () => {

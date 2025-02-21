@@ -49,9 +49,6 @@
       "@buttons/*": [
         "src/components/buttons/*"
       ],
-      "@header/*": [
-        "src/components/header/*"
-      ],
       "@utils/*": [
         "src/utils/*"
       ],
