@@ -1,5 +1,5 @@
-import Header from "@/components/header/Header";
-import NavBar from "@/components/navbar/NavBar";
+import { Header } from "@/components/header/Header";
+import { NavBar } from "@/components/navbar/NavBar";
 import BioContent from "./BioContent";
 
 export const Bio = () => {
