@@ -49,12 +49,7 @@ export const PresentBio = () => {
         ))}
       <p>
         To learn more about my projects and ongoing work,{" "}
-        <Link
-          to="/projects"
-          id={IDStyles.TextLink}
-          target="_blank"
-          className="transition-all"
-        >
+        <Link to="/projects" id={IDStyles.TextLink} className="transition-all">
           please visit my projects page
         </Link>
         .
