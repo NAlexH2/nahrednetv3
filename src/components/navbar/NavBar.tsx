@@ -16,7 +16,7 @@ export const NavBar = ({ routedPage = "" }: { routedPage: string }) => {
             key={index}
             routedPage={routedPage}
             btnText={item}
-            className="text-5xl"
+            textClassName="transition-all text-5xl font-light max-md:text-3xl"
           />
         </Link>
       ))}

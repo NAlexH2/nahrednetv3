@@ -1,18 +1,27 @@
-import beard from "@assets/images/beard.svg";
+import { Link } from "react-router-dom";
+import { HeaderLogo } from "./HeaderLogo";
+import { HeaderText } from "./HeaderText";
+import { IDStyles } from "@/styles";
 
 export const Header = () => {
-  // Explicitly define the type of the ref
+  const homeUrl = "/";
+  const btnTxt = "button-text";
+  const btnClassDefault =
+    "pl-3 pt-6 text-7xl font-squarepeg transition-all max-md:hidden";
   return (
-    <div id="header" className="grid grid-cols-4 grid-rows-1">
-      <div className="flex justify-center col-start-2 col-span-2">
-        <button id="header-button" className="flex">
-          <img className="" src={beard} width={100} />
-          <div className="pl-3 pt-6 text-8xl font-squarepeg text-white">
-            Alex Harris
-          </div>
-        </button>
+    <div className="grid grid-cols-4 grid-rows-1">
+      <div className="flex justify-center col-start-1 col-span-5">
+        <Link to={homeUrl} className="z-40 px-5">
+          <button id={IDStyles.NavBarBtn} className="flex -mt-7">
+            <HeaderLogo />
+            <HeaderText id={btnTxt} className={btnClassDefault} />
+          </button>
+        </Link>
       </div>
-      <hr className="-mt-3 w-100 h-2 mx-auto my-4 border-0 mb-15 col-start-2 col-span-2" />
+      <hr
+        className="transition-all -mt-2 w-72 h-1 mx-auto my-4 border-0 mb-5 col-start-1 col-span-5
+          bg-jade max-md:hidden"
+      />
     </div>
   );
 };

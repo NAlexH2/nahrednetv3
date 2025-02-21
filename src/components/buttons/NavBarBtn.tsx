@@ -1,22 +1,19 @@
 import { MouseEventHandler, useEffect, useState } from "react";
-import ClassStyles from "@/styles/ClassStyles.module.css";
+import IDStyles from "@/styles/IDStyles.module.css";
 
 interface MButtonProps {
   btnText: string;
   routedPage: string;
-  className?: string;
+  textClassName?: string;
   id?: string;
   onClick?: MouseEventHandler;
   children?: React.ReactNode;
 }
-const navBarBtn = "navBarBtn";
-const activeBtn: string = `${ClassStyles.activeNavBtn} bg-clip-text \
-  text-white underline decoration-5 decoration-transparent-almond decoration-3 \
-  font-bold`;
+const activeBtn: string = `text-jade underline decoration-5 \
+decoration-tp-almond decoration-3`;
 
-const nonActiveBtn: string = `${ClassStyles.notActiveNavBtn} \
-  bg-clip-text text-transparent-almond decoration-5 underline decoration-honey \
-  decoration-3 font-bold`;
+const nonActiveBtn: string = `text-tp-almond decoration-5 underline \
+decoration-jade decoration-3`;
 
 export const NavBarBtn = (prop: MButtonProps) => {
   const [isAct, setIsAct] = useState(false);
@@ -29,8 +26,8 @@ export const NavBarBtn = (prop: MButtonProps) => {
   };
 
   return (
-    <button id={navBarBtn} className={getButtonClass()}>
-      <div className={`${prop.className}`}>{prop.btnText}</div>
+    <button id={IDStyles.NavBarBtn} className={getButtonClass()}>
+      <div className={`${prop.textClassName}`}>{prop.btnText}</div>
     </button>
   );
 };

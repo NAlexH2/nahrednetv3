@@ -1,9 +1,0 @@
-#navBarBtn {
-  filter: blur(0.01rem);
-  text-underline-offset: 5px;
-}
-#navBarBtn:hover {
-  cursor: pointer;
-  color: var(--ocean-slate-light);
-  filter: blur(0.01rem);
-}

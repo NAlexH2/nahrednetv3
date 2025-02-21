@@ -1,14 +1,15 @@
 import Header from "@/components/header/Header";
 import NavBar from "@/components/navbar/NavBar";
+import BioContent from "./BioContent";
 
 export const Bio = () => {
   const routedPage: string = "Bio";
 
   return (
-    <div>
+    <div className="m-5">
       <Header />
       <NavBar routedPage={routedPage} />
-      bio
+      <BioContent />
     </div>
   );
 };

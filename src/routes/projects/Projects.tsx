@@ -5,7 +5,7 @@ export const Projects = () => {
   const routedPage: string = "Projects";
 
   return (
-    <div>
+    <div className="m-5">
       <Header />
       <NavBar routedPage={routedPage} />
       projects

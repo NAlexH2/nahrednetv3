@@ -5,7 +5,7 @@ export const Experience = () => {
   const routedPage: string = "Experience";
 
   return (
-    <div>
+    <div className="m-5">
       <Header />
       <NavBar routedPage={routedPage} />
       experience
