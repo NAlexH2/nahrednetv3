@@ -1,6 +1,7 @@
 export interface AccordionItem {
   id: number;
   title: string;
+  subtitle: string;
   content: string;
   dates: string;
 }
@@ -8,7 +9,8 @@ export interface AccordionItem {
 const accordionInfo: AccordionItem[] = [
   {
     id: 0,
-    title: "CDK Global - Software Engineering Intern",
+    title: "CDK Global",
+    subtitle: "Software Engineering Intern",
     dates: "June 2024 – October 2024",
     content: `
       <div class="px-6 mt-7">
@@ -39,7 +41,8 @@ const accordionInfo: AccordionItem[] = [
   },
   {
     id: 1,
-    title: "Portland State University - Teacher's Assistant",
+    title: "Portland State University",
+    subtitle: "Teacher's Assistant",
     dates: "April 2021 - December 2024",
     content: `
       <div class="px-6 mt-7">
@@ -67,7 +70,8 @@ const accordionInfo: AccordionItem[] = [
   },
   {
     id: 2,
-    title: "United States Navy - Electronics Technician, 2nd Class (E-5)",
+    title: "United States Navy",
+    subtitle: "Electronics Technician, 2nd Class (E-5)",
     dates: "February 2012 - February 2020",
     content: `
       <div class="mt-7 text-2xl font-medium">USS Theodore Roosevelt:</div>
