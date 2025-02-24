@@ -1,5 +1,5 @@
 import { useState } from "react";
-import accordionInfo from "./AccordionInfo";
+import accordionInfo from "./ExperienceInfo";
 
 export const ExperienceAccordion = () => {
   const [accordion, setAccordion] = useState<number | null>(null);
