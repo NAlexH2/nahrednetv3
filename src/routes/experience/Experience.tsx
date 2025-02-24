@@ -1,5 +1,7 @@
+import { DefaultPageContainer } from "@/components/DefaultPageContainer";
 import NavBar from "@/components/navbar/NavBar";
 import TopBanner from "@/components/topBanner/TopBanner";
+import { ExperienceAccordion } from "./ExperienceAccordion";
 
 export const Experience = () => {
   const routedPage: string = "Experience";
@@ -8,7 +10,7 @@ export const Experience = () => {
     <div className="m-5">
       <TopBanner />
       <NavBar routedPage={routedPage} />
-      experience
+      <DefaultPageContainer></DefaultPageContainer>
     </div>
   );
 };
