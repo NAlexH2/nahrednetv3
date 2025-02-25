@@ -74,8 +74,10 @@ const experienceInfo: ExperienceItem[] = [
     subtitle: "Electronics Technician, 2nd Class",
     dates: "February 2012 - February 2020",
     content: `
-      #USS Theodore Roosevelt
-      ##February 2013 - February 2017
+      ##USS Theodore Roosevelt
+
+
+      ###February 2013 - February 2017
 
 
       Manager of three maintenance work centers involving tracking and performing 
@@ -89,8 +91,10 @@ const experienceInfo: ExperienceItem[] = [
       person-hours.
       
 
-      #Commander Fleet Activities Sasebo, Japan
-      ##May 2017 - February 2020
+      ##Commander Fleet Activities Sasebo, Japan
+
+      
+      ###May 2017 - February 2020
 
 
       Tracked, authorized, and issued approved logistical requests and 

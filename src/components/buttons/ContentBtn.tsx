@@ -29,11 +29,15 @@ export const NavBarBtn = (prop: MButtonProps) => {
       className={`transition-all ${getButtonClass(prop.selected)} ${prop.btnClassName}`}
       onClick={prop.onClick}
     >
-      <div className={`transition-all ${prop.textClassName} text-lg`}>
+      <div
+        className={`transition-all ${prop.textClassName} text-lg max-md:text-sm`}
+      >
         {prop.btnText}
       </div>
       {prop.btnSubText ? (
-        <div className="transition-all text-sm">{prop.btnSubText}</div>
+        <div className="transition-all text-sm max-md:text-xs">
+          {prop.btnSubText}
+        </div>
       ) : (
         <></>
       )}
