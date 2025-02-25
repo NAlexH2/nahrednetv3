@@ -1,30 +1,42 @@
-import { useEffect, useState } from "react";
-import IDStyles from "@/styles/IDStyles.module.css";
+import { MouseEventHandler } from "react";
 
 interface MButtonProps {
   btnText: string;
+  btnSubText?: string;
+  btnClassName?: string;
   textClassName?: string;
   id?: string;
+  selected?: boolean;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
 }
-const activeBtn: string = `text-jade underline decoration-5 \
-decoration-tp-almond decoration-3`;
+const activeBtn: string = `text-black border-jade border-5 rounded-4xl \
+bg-tp-almond decoration-tp-almond font-bold hover:!cursor-default`;
 
-const nonActiveBtn: string = `text-tp-almond decoration-5 underline \
-decoration-jade decoration-3`;
+const nonActiveBtn: string = `text-jade border-tp-almond border-5 rounded-4xl \
+decoration-5 font-bold hover:text-honey`;
 
 export const NavBarBtn = (prop: MButtonProps) => {
-  // const [isAct, setIsAct] = useState(false);
-  // useEffect(() => {
-  //   setIsAct(prop.routedPage === prop.btnText);
-  // }, [prop.routedPage, prop.btnText]);
-
-  // const getButtonClass = (): string => {
-  //   return isAct ? activeBtn : nonActiveBtn;
-  // };
+  const getButtonClass = (
+    selected: boolean | undefined,
+  ): string | undefined => {
+    if (selected === undefined) return;
+    else if (selected) return activeBtn;
+    return nonActiveBtn;
+  };
 
   return (
-    <button id={IDStyles.NavBarBtn}>
-      <div className={`${prop.textClassName}`}>{prop.btnText}</div>
+    <button
+      className={`transition-all ${getButtonClass(prop.selected)} ${prop.btnClassName}`}
+      onClick={prop.onClick}
+    >
+      <div className={`transition-all ${prop.textClassName} text-lg`}>
+        {prop.btnText}
+      </div>
+      {prop.btnSubText ? (
+        <div className="transition-all text-sm">{prop.btnSubText}</div>
+      ) : (
+        <></>
+      )}
     </button>
   );
 };

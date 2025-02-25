@@ -1,10 +1,10 @@
 import { useState } from "react";
-import accordionInfo from "./ExperienceInfo";
+import experienceInfo from "./ExperienceInfo";
 
 export const ExperienceAccordion = () => {
   const [accordion, setAccordion] = useState<number | null>(null);
   const firstItem: number = 0; //Just a nice keyword
-  const lastItem: number = accordionInfo.length - 1; //ID our final accordion item
+  const lastItem: number = experienceInfo.length - 1; //ID our final accordion item
   const handleAccordion = (index: number) => {
     console.log(index === accordion);
     if (index === accordion) {
@@ -54,7 +54,7 @@ export const ExperienceAccordion = () => {
   };
   return (
     <div className="col-start-2 col-end-16">
-      {accordionInfo.map((item, index) => (
+      {experienceInfo.map((item, index) => (
         <div
           key={index}
           onClick={() => handleAccordion(item.id)}

@@ -38,7 +38,7 @@ export const PresentBio = () => {
   return (
     <>
       <br />
-      <h2 className="">Present:</h2>
+      <h2 className="mt-5 mb-2">Present:</h2>
       {info
         .trim()
         .split("\n\n") // Splitting by double newlines to separate paragraphs
