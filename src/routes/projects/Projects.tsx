@@ -8,12 +8,6 @@ export const Projects = () => {
     <div className="m-5">
       <TopBanner />
       <NavBar routedPage={routedPage} />
-      <h2 className="max-md:flex max-md:justify-center mt-5 max-sm:!text-xl">
-        aaaa
-      </h2>
-      <h3 className="max-md:flex max-md:justify-center mt-2 max-sm:!text-lg">
-        bbbb
-      </h3>
     </div>
   );
 };

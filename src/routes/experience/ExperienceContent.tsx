@@ -34,7 +34,7 @@ export const ExperienceContent = () => {
         containerRef.current.offsetWidth +
         buttonRefs.current[actBtn]!.offsetWidth / 2;
       if (actBtn !== 0 || actBtn !== expLength) {
-        containerRef.current.scrollLeft = scrollAmount + 15;
+        containerRef.current.scrollLeft = scrollAmount + 20;
       } else {
         containerRef.current.scrollLeft = scrollAmount;
       }
@@ -94,7 +94,6 @@ export const ExperienceContent = () => {
     );
   };
 
-  // Correct way to set refs in a list
   const setButtonRef = (el: HTMLDivElement | null, index: number) => {
     buttonRefs.current[index] = el;
   };
@@ -115,22 +114,24 @@ export const ExperienceContent = () => {
         <div className="max-md:flex max-md:justify-center max-md:ml-0.5">
           <div
             ref={containerRef}
-            className={`max-md:-mt-4 max-md:flex max-md:justify-start max-md:overflow-x-scroll
-              max-md:min-w-80 max-md:border-l-5 max-md:border-r-5 max-md:border-jade
-              max-md:rounded-4xl min-md:grid min-md:grid-rows-${experienceInfo.length}
+            className={`max-md:-mt-4 max-md:flex max-md:overflow-x-scroll max-md:min-w-80
+              max-md:border-l-5 max-md:border-r-5 max-md:border-jade max-md:rounded-4xl
+              min-md:grid min-md:grid-rows-${experienceInfo.length}
               ${ClassStyles.ExperienceBar}`}
           >
-            {experienceInfo.map((item, index) => (
-              <div key={index} ref={el => setButtonRef(el, index)}>
-                <ContentBtn
-                  btnClassName="m-2 p-2 max-md:min-w-55 min-md:min-w-65 max"
-                  btnText={item.title}
-                  btnSubText={item.subtitle}
-                  selected={index === actBtn}
-                  onClick={() => setIsActBtn(index)}
-                />
-              </div>
-            ))}
+            <div className={"max-md:flex max-md:mx-9"}>
+              {experienceInfo.map((item, index) => (
+                <div key={index} ref={el => setButtonRef(el, index)}>
+                  <ContentBtn
+                    btnClassName="m-2 p-2 max-md:min-w-55 min-md:min-w-65 max"
+                    btnText={item.title}
+                    btnSubText={item.subtitle}
+                    selected={index === actBtn}
+                    onClick={() => setIsActBtn(index)}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
