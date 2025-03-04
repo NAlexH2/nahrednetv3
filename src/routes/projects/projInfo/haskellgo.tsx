@@ -1,7 +1,4 @@
-import { NRNImage } from "components/ui/imageComponents";
 import HGCode from "/public/images/projectImages/HaskellGoSnippet.png";
-import Link from "next/link";
-import { IDStyles, ClassStyles } from "styles";
 import { CodeBlock, dracula, Code } from "react-code-blocks";
 import AnimateTx from "components/utils/animateTx";
 

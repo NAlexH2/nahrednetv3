@@ -1,4 +1,8 @@
-import PBCode from "/public/images/projectImages/PhoneBillSnippet.png";
+import { NRNImage } from "@/components/imageComponents";
+import PBCode from "@/assets/images/phonebill-android.png";
+import { ClassStyles } from "@/styles";
+import IDStyles from "@/styles/IDStyles.module.css";
+import { Link } from "react-router-dom";
 
 const projURL = "https://github.com/NAlexH2/phonebill-android-project";
 export const PhoneBill = () => {
@@ -6,12 +10,11 @@ export const PhoneBill = () => {
     <div className="my-8 mx-5">
       <div className="text-center">
         <Link
-          href={projURL}
-          passHref={true}
+          to={projURL}
           target="_blank"
           rel="noopener noreferrer"
           className="text-4xl italic underline decoration-[var(--honey)] font-semibold"
-          id={IDStyles.UniLink}
+          id={IDStyles.TextLink}
         >
           Phone Bill Manager
         </Link>

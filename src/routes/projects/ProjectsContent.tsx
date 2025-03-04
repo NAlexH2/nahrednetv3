@@ -1,8 +1,9 @@
 import ContentBtn from "@/components/buttons/ContentBtn";
+import projectInfo from "./projInfo/projectsInfo";
 import { ReactElement, useEffect, useState, useRef } from "react";
 import { ClassStyles } from "@/styles";
 
-export const ExperienceContent = () => {
+export const ProjectsContent = () => {
   const [actBtn, setIsActBtn] = useState(0);
   const [actBtnData, setActBtnData] = useState<ReactElement<any, any> | null>(
     null,
@@ -13,7 +14,7 @@ export const ExperienceContent = () => {
 
   // Initialize refs array with the correct length
   useEffect(() => {
-    buttonRefs.current = Array(experienceInfo.length).fill(null);
+    buttonRefs.current = Array(projectInfo.length).fill(null);
   }, []);
 
   useEffect(() => {
@@ -31,8 +32,7 @@ export const ExperienceContent = () => {
   }, [actBtn]);
 
   const buildComponent = (actBtn: number) => {
-    const info = experienceInfo[actBtn];
-    const info_content = info.content.trim().split("\n\n");
+    const info = projectInfo[actBtn];
     return (
       <>
         <h2 id="experience-date">
@@ -40,45 +40,7 @@ export const ExperienceContent = () => {
             {info.dates}
           </div>
         </h2>
-        <div className="max-md:grid max-md:grid-cols-7">
-          <ul className="max-md:col-start-1 max-md:col-end-8 max-md:ml-5">
-            {info_content.map((content, index) => {
-              const content_trim = content.trim();
-              if (content_trim.startsWith("###")) {
-                // Handle h3 headings
-                return (
-                  <h3
-                    className="max-md:flex max-md:justify-center mt-2 max-sm:!text-lg min-md:ml-4"
-                    key={index}
-                  >
-                    {content_trim.substring(3)}
-                  </h3>
-                );
-              } else if (content_trim.startsWith("##")) {
-                // Handle h2 headings
-                return (
-                  <h2
-                    className="max-md:flex max-md:justify-center mt-5 max-sm:!text-xl min-md:ml-4"
-                    key={index}
-                  >
-                    {content_trim.substring(2)}
-                  </h2>
-                );
-              } else {
-                // Regular list items
-                return (
-                  <li
-                    className="max-md:col-start-2 max-md:col-end-7 max-md:my-2 max-md:text-justify min-md:ml-10
-                      min-md:mt-2.5"
-                    key={index}
-                  >
-                    {content_trim}
-                  </li>
-                );
-              }
-            })}
-          </ul>
-        </div>
+        <div>{info.content}</div>
       </>
     );
   };
@@ -105,11 +67,10 @@ export const ExperienceContent = () => {
             ref={containerRef}
             className={`max-md:-mt-4 max-md:flex max-md:overflow-x-scroll max-md:min-w-80
               max-md:border-l-5 max-md:border-r-5 max-md:border-jade max-md:rounded-4xl
-              min-md:grid min-md:grid-rows-${experienceInfo.length}
-              ${ClassStyles.ExperienceBar}`}
+              min-md:grid min-md:grid-rows-${projectInfo.length} ${ClassStyles.ExperienceBar}`}
           >
             <div className={"max-md:flex max-md:mx-9"}>
-              {experienceInfo.map((item, index) => (
+              {projectInfo.map((item, index) => (
                 <div
                   id={btnId.concat(index.toString())}
                   key={index}
@@ -119,7 +80,6 @@ export const ExperienceContent = () => {
                   <ContentBtn
                     btnClassName="m-2 p-2 max-md:min-w-55 min-md:min-w-65 max"
                     btnText={item.title}
-                    btnSubText={item.subtitle}
                     selected={index === actBtn}
                     onClick={() => setIsActBtn(index)}
                   />
@@ -138,3 +98,5 @@ export const ExperienceContent = () => {
     </>
   );
 };
+
+export default ProjectsContent;
