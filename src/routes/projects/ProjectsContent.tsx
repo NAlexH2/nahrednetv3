@@ -1,5 +1,4 @@
 import ContentBtn from "@/components/buttons/ContentBtn";
-import experienceInfo from "./ExperienceInfo";
 import { ReactElement, useEffect, useState, useRef } from "react";
 import { ClassStyles } from "@/styles";
 
