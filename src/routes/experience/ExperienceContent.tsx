@@ -4,6 +4,7 @@ import { ReactElement, useEffect, useState, useRef } from "react";
 import { ClassStyles } from "@/styles";
 
 export const ExperienceContent = () => {
+  const expLength = experienceInfo.length - 1;
   const [actBtn, setIsActBtn] = useState(0);
   const [actBtnData, setActBtnData] = useState<ReactElement<any, any> | null>(
     null,
@@ -28,10 +29,15 @@ export const ExperienceContent = () => {
     ) {
       // TODO not working
       // Scroll the button into view with smooth behavior
-      // containerRef.current.scrollLeft =
-      //   buttonRefs.current[actBtn]!.offsetLeft -
-      //   containerRef.current.offsetWidth +
-      //   buttonRefs.current[actBtn]!.offsetWidth / 2;
+      let scrollAmount =
+        buttonRefs.current[actBtn]!.offsetLeft -
+        containerRef.current.offsetWidth +
+        buttonRefs.current[actBtn]!.offsetWidth / 2;
+      if (actBtn !== 0 || actBtn !== expLength) {
+        containerRef.current.scrollLeft = scrollAmount + 15;
+      } else {
+        containerRef.current.scrollLeft = scrollAmount;
+      }
     }
   }, [actBtn]);
 
