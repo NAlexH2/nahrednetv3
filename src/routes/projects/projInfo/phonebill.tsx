@@ -13,20 +13,22 @@ export const PhoneBill = () => {
           to={projURL}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-4xl italic underline decoration-[var(--honey)] font-semibold"
+          className="text-4xl italic underline decoration-honey font-semibold"
           id={IDStyles.TextLink}
         >
           Phone Bill Manager
         </Link>
       </div>
       <br />
-      <p className="float-left mr-10 mb-2">
-        <div className="text-2xl underline decoration font-medium decoration-[var(--honey)]">
+      <p className="float-left border-r-5 border-b-5 mr-5 mb-2">
+        <div className="text-2xl underline decoration font-medium decoration-honey">
           Tech Stack:
         </div>
-        <ul className={`${ClassStyles.CustomList} float-left`}>
+        <ul className={`${ClassStyles.CustomList} mb-4`}>
           <li className="mt-1 ml-5">Android Studio</li>
+          <li className="mt-1 ml-5">Java</li>
           <li className="mt-1 ml-5">Maven</li>
+          <li className="mt-1 ml-5">XML</li>
           <li className="mt-1 ml-5">JUnit</li>
           <li className="mt-1 ml-5">JaCoCo</li>
         </ul>

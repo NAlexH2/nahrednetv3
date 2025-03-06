@@ -1,12 +1,10 @@
-import CloudLambda from "@/assets/images/projectImages/cloudProjImages/esrb_lambda.png";
-import JinjaTemplate from "@/assets/images/projectImages/cloudProjImages/jinja_template.png";
 import { Code, dracula } from "react-code-blocks";
 import { Link } from "react-router-dom";
 import NRNImage from "@/components/imageComponents/nrnImage";
 import { ClassStyles, IDStyles } from "@/styles";
 
-const projURL = "https://github.com/NAlexH2/gcp-video-game-search";
-export const CloudProject = () => {
+const projURL = "https://github.com/NAlexH2/nahrednetv3";
+export const NahRedNetV3 = () => {
   return (
     <div className="my-8 mx-5">
       <div className="text-center">
@@ -17,7 +15,7 @@ export const CloudProject = () => {
           className="text-4xl italic underline decoration-honey font-semibold"
           id={IDStyles.TextLink}
         >
-          Video Game Search
+          neh-red.net V3
         </Link>
       </div>
       <br />
@@ -100,18 +98,6 @@ export const CloudProject = () => {
           obtaining the exact release date, the ESRB age rating, and only
           wanting to view actual real and released games.
         </p>
-        <div className="flex justify-center">
-          <NRNImage
-            src={CloudLambda}
-            className="p-5 max-h-[280px] w-auto"
-            alt={`Snippet of Python code using a lambda function to 
-              select only ESRB game ratings from a resulting query.`}
-          ></NRNImage>
-        </div>
-        <div className="text-center -mt-4 mb-5 text-xs">
-          Snippet of Python code using a lambda function to select only ESRB
-          game ratings from a resulting query.
-        </div>
         <p className="mt-3">
           IGDB allows anyone, it seems, to upload and add a game to the
           database. This means there are games that are simply fan creations
@@ -134,18 +120,6 @@ export const CloudProject = () => {
           components to render based on if the response data was returned with
           or without certain information.
         </p>
-        <div className="flex justify-center">
-          <NRNImage
-            src={JinjaTemplate}
-            className="p-5 max-h-[280px] w-auto"
-            alt={`Jinja if/else statement to render specific element if
-              the response has some data or not.`}
-          ></NRNImage>
-        </div>
-        <div className="text-center -mt-4 mb-5 text-xs">
-          Jinja if/else statement to render specific element if the response has
-          some data or not.
-        </div>
         <p className="mt-3">
           In this example, I have a Jinja for loop going through a
           &#34;games&#34; response object (which has multiple results from the
@@ -183,4 +157,4 @@ export const CloudProject = () => {
   );
 };
 
-export default CloudProject;
+export default NahRedNetV3;
