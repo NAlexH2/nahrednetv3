@@ -80,12 +80,6 @@ h3 {
 
 li {
   text-align: justify;
-  /* margin-left: 40px;
-  margin-top: 10px; */
-}
-
-li {
-  text-align: justify;
   margin-right: 20px;
 }
 
@@ -93,4 +87,6 @@ li::before {
   content: "> ";
   color: var(--honey);
   position: absolute;
+  margin-top: -3px;
+  margin-left: -20px;
 }

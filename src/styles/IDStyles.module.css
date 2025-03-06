@@ -25,3 +25,11 @@
   min-height: 200px;
   min-width: 200px;
 }
+
+#SubLists > li::before {
+  content: "v ";
+  margin-top: -3px;
+  color: var(--honey);
+  position: absolute;
+  margin-left: -20px;
+}
