@@ -1,9 +1,14 @@
 # Table of Contents
 - [Table of Contents](#table-of-contents)
+- [3/5/2025](#352025)
 - [2/20/2025](#2202025)
 - [2/17/2025](#2172025)
   - [Later that day](#later-that-day)
 
+
+# 3/5/2025
+- Build still working. Most pages complete. I haven't been adding to this mostly because the rest has gone pretty smooth. Except...
+- Buttons on the projects page do not want to budge in the grid no matter what. I wonder if the map is enforcing restrictions or I have CSS restricting the button somewhere else.. Not sure.
 
 # 2/20/2025
 - The build is failing again and I cannot remember what I did to fix it. I might need to add an index file to header.
