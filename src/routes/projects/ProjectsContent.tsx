@@ -95,13 +95,16 @@ export const ProjectsContent = () => {
           </div>
         </div>
       </div>
-      <div className="grid max-md:grid-cols-7 min-md:grid-cols-16">
-        <div
-          className="max-md:col-start-1 max-md:col-end-8 min-md:ml-2 min-md:col-start-2
-            min-md:col-end-16 min-md:mt-3"
-        >
-          {actBtnData}
+      <div className="max-w-3xl mx-auto text-justify mt-10 text-[16px]">
+        <div className="grid max-md:grid-cols-7 min-md:grid-cols-16">
+          <div
+            className="max-md:col-start-1 max-md:col-end-8 min-md:ml-2 min-md:col-start-1
+              min-md:col-end-17 min-md:mt-3"
+          >
+            {actBtnData}
+          </div>
         </div>
+        /
       </div>
     </>
   );
