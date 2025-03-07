@@ -84,7 +84,7 @@ export const NahRedNetV3 = () => {
           expecting it to be a lot of placing components and customizing them
           the way I wanted them to be, but that turned into recreating and
           building my own components to behave{" "}
-          <i>exactly how I wanted them to</i>
+          <i>exactly how I wanted them to</i>.
         </p>
         <h3 className="underline decoration-honey mt-3">Why Vite?</h3>
         <p className="mt-1">
