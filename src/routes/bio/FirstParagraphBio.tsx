@@ -8,7 +8,8 @@ export const FirstParagraphBio = () => {
       <i>
         <b>Nicholas Alexander Harris,</b>
       </i>{" "}
-      though I go by Alex. I&apos;m currently a graduate student at{" "}
+      though I prefer to go by my middle name, Alex. I&apos;m currently a
+      graduate student at{" "}
       <Link
         to="https://www.pdx.edu/"
         id={IDStyles.TextLink}

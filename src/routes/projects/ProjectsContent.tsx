@@ -12,15 +12,12 @@ export const ProjectsContent = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const btnId = "btn#";
 
-  // Initialize refs array with the correct length
   useEffect(() => {
     buttonRefs.current = Array(projectInfo.length).fill(null);
   }, []);
 
   useEffect(() => {
     setActBtnData(buildComponent(actBtn));
-
-    // Handle scrolling on small screens
 
     const ele = document.getElementById(btnId.concat(actBtn.toString()));
     if (

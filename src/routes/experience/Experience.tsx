@@ -1,6 +1,7 @@
 import NavBar from "@/components/navbar/NavBar";
 import TopBanner from "@/components/topBanner/TopBanner";
 import { ExperienceContent } from "./ExperienceContent";
+import { PageFooter } from "@/components/pageFooter";
 
 export const Experience = () => {
   const routedPage: string = "Experience";
@@ -10,6 +11,7 @@ export const Experience = () => {
       <TopBanner />
       <NavBar routedPage={routedPage} />
       <ExperienceContent />
+      <PageFooter />
     </div>
   );
 };

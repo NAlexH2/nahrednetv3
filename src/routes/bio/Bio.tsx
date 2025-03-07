@@ -1,6 +1,7 @@
 import TopBanner from "@/components/topBanner/TopBanner";
 import BioContent from "./BioContent";
 import NavBar from "@/components/navbar/NavBar";
+import { PageFooter } from "@/components/pageFooter";
 
 export const Bio = () => {
   const routedPage: string = "Bio";
@@ -10,6 +11,7 @@ export const Bio = () => {
       <TopBanner />
       <NavBar routedPage={routedPage} />
       <BioContent />
+      <PageFooter />
     </div>
   );
 };

@@ -1,6 +1,5 @@
 import { Code, CodeBlock, dracula } from "react-code-blocks";
 import { Link } from "react-router-dom";
-import NRNImage from "@/components/imageComponents/nrnImage";
 import { ClassStyles, IDStyles } from "@/styles";
 
 const projURL = "https://github.com/NAlexH2/nahrednetv3";
