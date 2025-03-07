@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const projURL = "https://github.com/PSU-MCECS-SAFE/SAFE";
 export const Safe = () => {
   return (
-    <div className="my-8 mx-5">
+    <div className="my-3 mx-5">
       <div className="text-center">
         <Link
           to={projURL}

@@ -10,7 +10,7 @@ const unionedUnits = "[[0,1,2,3,5,6,8],[4,7]]";
 const projURL = "https://github.com/NAlexH2/HaskellGo";
 export const HaskellGo = () => {
   return (
-    <div className="my-8 mx-5">
+    <div className="my-3 mx-5">
       <div className="text-center">
         <Link
           to={projURL}

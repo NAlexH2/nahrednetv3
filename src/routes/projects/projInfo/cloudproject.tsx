@@ -8,7 +8,7 @@ import { ClassStyles, IDStyles } from "@/styles";
 const projURL = "https://github.com/NAlexH2/gcp-video-game-search";
 export const CloudProject = () => {
   return (
-    <div className="my-8 mx-5">
+    <div className="my-3 mx-5">
       <div className="text-center">
         <Link
           to={projURL}

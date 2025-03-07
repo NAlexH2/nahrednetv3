@@ -23,11 +23,18 @@ export const ProjectsContent = () => {
     // Handle scrolling on small screens
 
     const ele = document.getElementById(btnId.concat(actBtn.toString()));
-    if (ele) {
-      ele.scrollIntoView({
-        behavior: "smooth",
-        inline: "center",
-      });
+    if (
+      typeof window !== "undefined" &&
+      window.innerWidth < 768 &&
+      buttonRefs.current[actBtn] &&
+      containerRef.current
+    ) {
+      if (ele) {
+        ele.scrollIntoView({
+          behavior: "smooth",
+          inline: "center",
+        });
+      }
     }
   }, [actBtn]);
 
@@ -51,21 +58,27 @@ export const ProjectsContent = () => {
 
   return (
     <>
-      <div
-        className="max-md:col-start-1 max-md:col-end-8 min-md:hidden max-md:mb-3
-          max-md:justify-center text-lg text-left place-self-center"
-      >
-        Swipe and tap to see more
-      </div>
-      <div className={"max-md:col-start-3 max-md:col-end-6"}>
-        <div className="max-md:flex max-md:justify-center max-md:ml-0.5">
+      <div className="transition-all">
+        <div className="max-md:grid max-md:grid-cols-7">
+          <div
+            className="max-md:col-start-1 max-md:col-end-8 min-md:hidden max-md:justify-center text-lg
+              text-left place-self-center max-md:mt-4 max-md:-mb-1"
+          >
+            Swipe and tap to see more
+          </div>
+        </div>
+        <div className="max-md:flex max-md:justify-center">
           <div
             ref={containerRef}
-            className={` max-md:-mt-4 max-md:flex max-md:overflow-x-scroll max-md:min-w-80
-              max-md:border-l-5 max-md:border-r-5 max-md:border-jade max-md:rounded-4xl
-              ${ClassStyles.ExperienceBar}`}
+            className={`${ClassStyles.ExperienceBar} min-md:flex min-md:flex-wrap min-md:justify-center
+              max-md:max-w-80 max-md:flex max-md:overflow-x-scroll max-md:min-w-80
+              max-md:border-l-5 max-md:border-r-5 max-md:border-jade max-md:rounded-4xl`}
           >
-            <div className={"max-md:flex max-md:mx-9"}>
+            <div
+              className={
+                "flex justify-center min-md:mt-5 min-md:flex-wrap min-md:max-w-200"
+              }
+            >
               {projectInfo.map((item, index) => (
                 <div
                   id={btnId.concat(index.toString())}
@@ -85,11 +98,13 @@ export const ProjectsContent = () => {
           </div>
         </div>
       </div>
-      <div
-        className="max-md:col-start-1 max-md:col-end-8 min-md:ml-2 min-md:col-start-1
-          min-md:col-end-17"
-      >
-        {actBtnData}
+      <div className="grid max-md:grid-cols-7 min-md:grid-cols-16">
+        <div
+          className="max-md:col-start-1 max-md:col-end-8 min-md:ml-2 min-md:col-start-2
+            min-md:col-end-16 min-md:mt-3"
+        >
+          {actBtnData}
+        </div>
       </div>
     </>
   );

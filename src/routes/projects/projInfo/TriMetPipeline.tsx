@@ -35,7 +35,7 @@ media = MediaFileUpload(RAW_DATA_PATH + "/" + files[i])`;
 
 export const TriMetPipeline = () => {
   return (
-    <div className="my-8 mx-5">
+    <div className="my-3 mx-5">
       <div className="text-center">
         <Link
           to={projURL}

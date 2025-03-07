@@ -1,4 +1,3 @@
-import { DefaultPageContainer } from "@/components/DefaultPageContainer";
 import NavBar from "@/components/navbar/NavBar";
 import TopBanner from "@/components/topBanner/TopBanner";
 import { ExperienceContent } from "./ExperienceContent";
@@ -10,9 +9,7 @@ export const Experience = () => {
     <div className="m-5">
       <TopBanner />
       <NavBar routedPage={routedPage} />
-      <DefaultPageContainer>
-        <ExperienceContent />
-      </DefaultPageContainer>
+      <ExperienceContent />
     </div>
   );
 };

@@ -89,53 +89,55 @@ export const ExperienceContent = () => {
   };
 
   return (
-    <>
-      <div
-        className="col-start-1 col-end-8 min-md:hidden max-md:mb-3 max-md:justify-center text-lg
-          text-left place-self-center"
-      >
-        Swipe and tap to see more
-      </div>
-      <div
-        className={
-          "max-md:col-start-3 max-md:col-end-6 min-md:col-start-1 min-md:col-end-7"
-        }
-      >
-        <div className="max-md:flex max-md:justify-center max-md:ml-0.5">
-          <div
-            ref={containerRef}
-            className={`max-md:-mt-4 max-md:flex max-md:overflow-x-scroll max-md:min-w-80
-              max-md:border-l-5 max-md:border-r-5 max-md:border-jade max-md:rounded-4xl
-              min-md:grid min-md:grid-rows-${experienceInfo.length}
-              ${ClassStyles.ExperienceBar}`}
-          >
-            <div className={"max-md:flex max-md:mx-9"}>
-              {experienceInfo.map((item, index) => (
-                <div
-                  id={btnId.concat(index.toString())}
-                  key={index}
-                  ref={el => setButtonRef(el, index)}
-                >
-                  <a href={`#${btnId.concat(index.toString())}`} />
-                  <ContentBtn
-                    btnClassName="m-2 p-2 max-md:min-w-55 min-md:min-w-65 max"
-                    btnText={item.title}
-                    btnSubText={item.subtitle}
-                    selected={index === actBtn}
-                    onClick={() => setIsActBtn(index)}
-                  />
-                </div>
-              ))}
+    <div className="max-w-3xl mx-auto text-justify mt-10 text-[16px]">
+      <div className="transition-all grid max-md:grid-cols-7 min-md:grid-cols-16">
+        <div
+          className="col-start-1 col-end-8 min-md:hidden max-md:mb-3 max-md:justify-center text-lg
+            text-left place-self-center"
+        >
+          Swipe and tap to see more
+        </div>
+        <div
+          className={
+            "max-md:col-start-3 max-md:col-end-6 min-md:col-start-1 min-md:col-end-7"
+          }
+        >
+          <div className="max-md:flex max-md:justify-center max-md:ml-0.5">
+            <div
+              ref={containerRef}
+              className={`max-md:-mt-4 max-md:flex max-md:overflow-x-scroll max-md:min-w-80
+                max-md:border-l-5 max-md:border-r-5 max-md:border-jade max-md:rounded-4xl
+                min-md:grid min-md:grid-rows-${experienceInfo.length}
+                ${ClassStyles.ExperienceBar}`}
+            >
+              <div className={"max-md:flex max-md:mx-9"}>
+                {experienceInfo.map((item, index) => (
+                  <div
+                    id={btnId.concat(index.toString())}
+                    key={index}
+                    ref={el => setButtonRef(el, index)}
+                  >
+                    <a href={`#${btnId.concat(index.toString())}`} />
+                    <ContentBtn
+                      btnClassName="m-2 p-2 max-md:min-w-55 min-md:min-w-65 max"
+                      btnText={item.title}
+                      btnSubText={item.subtitle}
+                      selected={index === actBtn}
+                      onClick={() => setIsActBtn(index)}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
+        <div
+          className="max-md:col-start-1 max-md:col-end-8 min-md:ml-2 min-md:col-start-7
+            min-md:col-end-17"
+        >
+          {actBtnData}
+        </div>
       </div>
-      <div
-        className="max-md:col-start-1 max-md:col-end-8 min-md:ml-2 min-md:col-start-7
-          min-md:col-end-17"
-      >
-        {actBtnData}
-      </div>
-    </>
+    </div>
   );
 };
