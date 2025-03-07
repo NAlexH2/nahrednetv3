@@ -7,6 +7,7 @@
   - [Why Vite?](#why-vite)
   - [Where Is This Deployed?](#where-is-this-deployed)
   - [How Long Did This Take?](#how-long-did-this-take)
+  - [Can We See Version 1 and Version 2?](#can-we-see-version-1-and-version-2)
 
 # nah-red.net V3
 
@@ -73,3 +74,8 @@ Though looking at the commit history exclusively, it was 3 weeks. Not bad, and
 is far less time than the V2, which took me a about 2.5 months of learning and 
 researching on my own simply because of the volume of new stuff I was learning 
 everyday.
+
+## Can We See Version 1 and Version 2?
+You can visit the source code for [version 1 here](https://github.com/NAlexH2/nahrednetv1). 
+While you can find [version 2 here](https://github.com/NAlexH2/nahrednetv2). 
+Neither of these websites are currently deployed.
