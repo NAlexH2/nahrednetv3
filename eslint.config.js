@@ -5,6 +5,17 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
 
 export default tseslint.config(
+  (module.exports = {
+    root: true,
+    env: { browser: true, es2020: true },
+    settings: {
+      "import/resolver": {
+        typescript: {
+          project: ["tsconfig.app.json"],
+        },
+      },
+    },
+  }),
   { ignores: ["dist"] },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],

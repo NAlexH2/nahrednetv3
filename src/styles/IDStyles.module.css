@@ -1,0 +1,35 @@
+#NavBarBtn {
+  filter: blur(0.01rem);
+}
+
+#NavBarBtn:hover {
+  cursor: pointer;
+  color: var(--honey);
+  filter: blur(0.01rem);
+}
+
+#TextLink {
+  color: rgb(85, 132, 109);
+  text-decoration: var(--honey) underline;
+}
+
+#TextLink:hover {
+  text-decoration: var(--tp-almond) underline;
+  color: var(--honey);
+}
+
+#Headshot {
+  border: 3px;
+  border-radius: 4%;
+  border-style: solid;
+  min-height: 200px;
+  min-width: 200px;
+}
+
+#SubLists > li::before {
+  content: "v ";
+  margin-top: -3px;
+  color: var(--honey);
+  position: absolute;
+  margin-left: -20px;
+}
