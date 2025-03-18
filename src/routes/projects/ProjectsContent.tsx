@@ -104,7 +104,6 @@ export const ProjectsContent = () => {
             {actBtnData}
           </div>
         </div>
-        /
       </div>
     </>
   );

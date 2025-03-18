@@ -1,6 +1,6 @@
-import { Code, CodeBlock, dracula } from "react-code-blocks";
 import { Link } from "react-router-dom";
 import { ClassStyles, IDStyles } from "@/styles";
+import { CodeBlocks } from "@/components/CodeBlocks";
 
 const projURL = "https://github.com/NAlexH2/nahrednetv3";
 
@@ -117,33 +117,57 @@ export const NahRedNetV3 = () => {
           framework. It made 99% of the work I had to do with CSS incredibly
           simple. From adding my own extended grid options to use with it, to
           being able to do something like{" "}
-          {<Code language="TypeScript" text="max-h-[280px]" theme={dracula} />}{" "}
+          <CodeBlocks
+            className="bg-gray-700 inline-block"
+            language="tsx"
+            code="max-h-[280px]"
+          />{" "}
           where I am setting my own pixel width instead of being constrained to
           their built in options was amazing! This extends to <i>almost</i> any
           CSS property too. Here is another pretty cool example:
         </p>
         <div className="my-4">
-          <CodeBlock
-            language="TypeScript"
-            text={sampleTailwind}
-            theme={dracula}
-            showLineNumbers={false}
+          <CodeBlocks
+            className="bg-gray-700 inline-block"
+            language="tsx"
+            code={sampleTailwind}
           />
         </div>
         <p className="mt-1">
           This is a{" "}
-          <Code language="TypeScript" text="className" theme={dracula} /> on a{" "}
-          <Code language="TypeScript" text="<div>" theme={dracula} /> inside of
-          the{" "}
-          <Code language="TypeScript" text="ProjectsContent" theme={dracula} />{" "}
+          <CodeBlocks
+            className="bg-gray-700 inline-block"
+            language="tsx"
+            code="className"
+          />{" "}
+          on a{" "}
+          <CodeBlocks
+            className="bg-gray-700 inline-block"
+            language="tsx"
+            code="<div>"
+          />{" "}
+          inside of the{" "}
+          <CodeBlocks
+            className="bg-gray-700 inline-block"
+            language="tsx"
+            code="ProjectsContent"
+          />{" "}
           component! This example allowed me to specify a maximum media query
           for an CSS property to stop taking effect. In this case{" "}
-          <Code language="TypeScript" text="max-md" theme={dracula} /> is
-          anything below medium viewport width less than 40rem, or 640px, will
-          take effect. Where as{" "}
-          <Code language="TypeScript" text="min-md" theme={dracula} /> will take
-          effect when the viewport is greater than 40rem/640px, and will persist
-          for all viewport widths beyond that point.
+          <CodeBlocks
+            className="bg-gray-700 inline-block"
+            language="tsx"
+            code="max-md"
+          />{" "}
+          is anything below medium viewport width less than 40rem, or 640px,
+          will take effect. Where as{" "}
+          <CodeBlocks
+            className="bg-gray-700 inline-block"
+            language="TypeScript"
+            code="min-md"
+          />{" "}
+          will take effect when the viewport is greater than 40rem/640px, and
+          will persist for all viewport widths beyond that point.
         </p>
         <h3 className="underline decoration-honey mt-3">
           Where Is This Deployed?

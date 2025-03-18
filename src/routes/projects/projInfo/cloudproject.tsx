@@ -1,9 +1,9 @@
 import CloudLambda from "@/assets/images/projectImages/cloudProjImages/esrb_lambda.png";
 import JinjaTemplate from "@/assets/images/projectImages/cloudProjImages/jinja_template.png";
-import { Code, dracula } from "react-code-blocks";
 import { Link } from "react-router-dom";
 import NRNImage from "@/components/imageComponents/nrnImage";
 import { ClassStyles, IDStyles } from "@/styles";
+import { CodeBlocks } from "@/components/CodeBlocks";
 
 const projURL = "https://github.com/NAlexH2/gcp-video-game-search";
 export const CloudProject = () => {
@@ -151,11 +151,10 @@ export const CloudProject = () => {
           &#34;games&#34; response object (which has multiple results from the
           query the user did), and for each game, if{" "}
           {
-            <Code
-              // @ts-ignore
+            <CodeBlocks
+              className="bg-gray-700 inline-block"
               language="TypeScript"
-              text='game["aggregated_rating"]'
-              theme={dracula}
+              code='game["aggregated_rating"]'
             />
           }{" "}
           has data, then the score - out of 100 - would be displayed.

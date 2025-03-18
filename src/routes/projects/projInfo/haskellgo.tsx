@@ -1,8 +1,8 @@
 import HGCode from "@/assets/images/projectImages/HaskellGoImages/HaskellGoSnippet.png";
-import { CodeBlock, dracula, Code } from "react-code-blocks";
 import { ClassStyles, IDStyles } from "@/styles";
 import { Link } from "react-router-dom";
 import NRNImage from "@/components/imageComponents/nrnImage";
+import { CodeBlocks } from "@/components/CodeBlocks";
 
 const separateUnits = "[[0,1,3],[2,3],[3,5,6],[4,7],[5,8]]";
 const unionedUnits = "[[0,1,2,3,5,6,8],[4,7]]";
@@ -112,23 +112,20 @@ export const HaskellGo = () => {
           solution and realized that my arrays had something along these lines
           of overlapping values:
           <div className="my-3">
-            <CodeBlock
-              text={separateUnits}
-              language="TypeScript"
-              showLineNumbers={false}
-              theme={dracula}
+            <CodeBlocks
+              className="bg-gray-700 inline-block"
+              code={separateUnits}
+              language="tsx"
             />
           </div>
         </p>
         <p className="mt-3 mx-4">
           Once recognizing this pattern, and a bit more research,{" "}
           {
-            <Code
-              // @ts-ignore
-              language="TypeScript"
-              text="a `union` b"
-              theme={dracula}
-              showLineNumbers={false}
+            <CodeBlocks
+              className="bg-gray-700 inline-block"
+              language="tsx"
+              code="a `union` b"
             />
           }{" "}
           could do a lot of heavy lifting in identifying my overlapping values.
@@ -136,11 +133,10 @@ export const HaskellGo = () => {
           fancy logic and a bit of function composition the above array came out
           to a nice neat list of lists like this:
           <div className="my-3">
-            <CodeBlock
-              text={unionedUnits}
-              language="TypeScript"
-              showLineNumbers={false}
-              theme={dracula}
+            <CodeBlocks
+              className="bg-gray-700 inline-block"
+              code={unionedUnits}
+              language="tsx"
             />
           </div>
         </p>

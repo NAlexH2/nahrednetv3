@@ -2,10 +2,10 @@ import FuturesFor from "@/assets/images/projectImages/TriMetImages/PubFutureBloc
 import CanBeRanExample from "@/assets/images/projectImages/TriMetImages/CanCodeBeRanExample.png";
 import FlowDGM from "@/assets/images/projectImages/TriMetImages/TriMetFlowDgm.png";
 import GDriveUpload from "@/assets/images/projectImages/TriMetImages/GdriveUpload.png";
-import { Code, CodeBlock, dracula } from "react-code-blocks";
 import { Link } from "react-router-dom";
 import NRNImage from "@/components/imageComponents/nrnImage";
 import { ClassStyles, IDStyles } from "@/styles";
+import { CodeBlocks } from "@/components/CodeBlocks";
 
 const projURL = "https://github.com/NAlexH2/TriMet-Data-Pipeline-CS510";
 const slidesLink =
@@ -210,13 +210,17 @@ export const TriMetPipeline = () => {
             the very start of the project was issue of Google Pub/Sub
             performance. Initially, the Python script managing the subscribing
             part of the pipeline was using{" "}
-            <Code
+            <CodeBlocks
+              className="bg-gray-700 inline-block"
               language="Python"
-              text="googleapiclient.discovery"
-              theme={dracula}
+              code="googleapiclient.discovery"
             />{" "}
             package. Instead it should have been using{" "}
-            <Code language="Python" text="google.cloud" theme={dracula} />{" "}
+            <CodeBlocks
+              className="bg-gray-700 inline-block"
+              language="Python"
+              code="google.cloud"
+            />{" "}
             package, and once this was corrected and the code refactored, the
             subscribing went from around 12 hours, down to about 4 minutes for
             around 300k daily records. The publishing also was impacted by this
@@ -250,7 +254,11 @@ export const TriMetPipeline = () => {
             popped from this list. This ensures all messages are published
             before moving on. This is <b>A</b> solution, and it's because not
             all{" "}
-            <Code language="Python" text="future.results()" theme={dracula} />{" "}
+            <CodeBlocks
+              className="bg-gray-700 inline-block"
+              language="Python"
+              code="future.results()"
+            />{" "}
             happen quick enough, and threads get piled up and may be lost when
             the script ends. Because of this, the missing acknowledgment was
             causing several thousands of records to just never be sent. The time
@@ -323,15 +331,32 @@ export const TriMetPipeline = () => {
           </div>
           <p className="mt-3">
             Here's how the{" "}
-            <Code language="Python" text="body" theme={dracula} /> and{" "}
-            <Code language="Python" text="media_body" theme={dracula} /> were
-            created:
+            <CodeBlocks
+              className="bg-gray-700 inline-block"
+              language="Python"
+              code="body"
+            />{" "}
+            and{" "}
+            <CodeBlocks
+              className="bg-gray-700 inline-block"
+              language="Python"
+              code="media_body"
+            />{" "}
+            were created:
           </p>
-          <CodeBlock language="Python" text={mediaStrucutre} theme={dracula} />{" "}
+          <CodeBlocks
+            className="bg-gray-700 inline-block"
+            language="Python"
+            code={mediaStrucutre}
+          />{" "}
           <p className="mt-3">
             The service object was created in the following way:
           </p>
-          <CodeBlock language="Python" text={serviceCreated} theme={dracula} />{" "}
+          <CodeBlocks
+            className="bg-gray-700 inline-block"
+            language="Python"
+            code={serviceCreated}
+          />{" "}
           <p className="mt-3">
             This is just a small snippet of the file, but these few lines
             essentially facilitate the entire backup from local storage to the
