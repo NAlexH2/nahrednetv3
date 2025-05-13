@@ -7,7 +7,7 @@ import NRNImage from "@/components/imageComponents/nrnImage";
 import { ClassStyles, IDStyles } from "@/styles";
 import { CodeBlocks } from "@/components/CodeBlocks";
 
-const projURL = "https://github.com/NAlexH2/TriMet-Data-Pipeline-CS510";
+const projURL = "https://github.com/NAlexH2/ETL-TriMetPipeline";
 const slidesLink =
   "https://docs.google.com/presentation/d/1zwebj1bL0xYedI6ku5EEljGD72pKLKqQsEkvEro4beA/edit?usp=drive_link";
 const videoLink =
