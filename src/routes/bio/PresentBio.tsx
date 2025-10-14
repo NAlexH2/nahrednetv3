@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 export const PresentBio = () => {
   const info: string = `
-                As of January 2025, I am continuing my Master's degree in
+                As of June 2025, I completed my Master's degree in
                 Computer Science at Portland State University, maintaining a
-                3.94 GPA as I enter my second to final term. My journey began in
+                3.95 GPA as I enter my second to final term. My journey began in
                 September 2023, and I've built on my academic foundation
                 through coursework, research, and professional experiences.
 
