@@ -5,13 +5,14 @@ export const PresentBio = () => {
   const info: string = `
                 As of June 2025, I completed my Master's degree in
                 Computer Science at Portland State University, maintaining a
-                3.95 GPA as I enter my second to final term. My journey began in
-                September 2023, and I've built on my academic foundation
-                through coursework, research, and professional experiences.
+                3.95 GPA. My journey began in September 2023 shortly after 
+                completing my Bachelors of Science in Computer Science. In 
+                this time I've built on my academic foundation through 
+                coursework, research, and professional experiences.
 
                
-                During my first term, I delved into critical planning and design
-                patterns, expanding my understanding of software development
+                During my Masters program, I delved into critical planning and
+                design patterns, expanding my understanding of software development
                 across projects of varying scales. While I had some foundational
                 knowledge from my undergraduate studies, this deeper exploration
                 provided new perspectives on designing efficient, scalable, and
