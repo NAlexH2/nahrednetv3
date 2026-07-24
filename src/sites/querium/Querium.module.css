@@ -270,6 +270,22 @@
   font-style: normal;
 }
 
+/* Set apart from the prose so it reads as a notice rather than as more
+   personality — someone arriving from an email wants the answer, not the voice. */
+.prose p.note {
+  border-left: 2px solid var(--rose-deep);
+  background-color: rgba(255, 255, 255, 0.016);
+  padding: 0.95rem 1.15rem;
+  margin-bottom: 1.6rem;
+  font-size: clamp(0.94rem, 2vw, 1.02rem);
+  color: rgba(241, 230, 220, 0.72);
+}
+
+.prose p.note strong {
+  color: var(--rose);
+  font-weight: 400;
+}
+
 /* ---------- principles ---------- */
 
 /* Fixed two-up rather than auto-fit: four cards auto-fitting would leave a
