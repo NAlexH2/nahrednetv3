@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 import { ClassStyles, IDStyles } from "@/styles";
 import { CodeBlocks } from "@/components/CodeBlocks";
 
-const projURL = "https://github.com/NAlexH2/nahrednetv3";
+const projURL = "https://github.com/NAlexH2/underway.sh";
 
-const sampleTailwind = `min-md:flex min-md:flex-wrap min-md:justify-center max-md:max-w-80 
-max-md:flex max-md:overflow-x-scroll max-md:min-w-80 max-md:border-l-5 
+const sampleTailwind = `min-md:flex min-md:flex-wrap min-md:justify-center max-md:max-w-80
+max-md:flex max-md:overflow-x-scroll max-md:min-w-80 max-md:border-l-5
 max-md:border-r-5 max-md:border-jade max-md:rounded-4xl`;
 
-export const NahRedNetV3 = () => {
+export const UnderwayShV3 = () => {
   return (
     <div className="my-3 mx-5">
       <div className="text-center">
@@ -19,7 +19,7 @@ export const NahRedNetV3 = () => {
           className="text-4xl italic underline decoration-honey font-semibold"
           id={IDStyles.TextLink}
         >
-          neh-red.net V3
+          underway.sh V3
         </Link>
       </div>
       <br />
@@ -195,4 +195,4 @@ export const NahRedNetV3 = () => {
   );
 };
 
-export default NahRedNetV3;
+export default UnderwayShV3;
