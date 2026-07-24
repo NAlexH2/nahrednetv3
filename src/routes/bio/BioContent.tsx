@@ -9,17 +9,19 @@ export const BioContent = () => {
   return (
     <>
       <div className="max-w-3xl mx-auto text-justify mt-10 text-[16px]">
-        <div className="transition-all grid max-md:grid-cols-7 min-md:grid-cols-16">
+        <div className="transition-all grid grid-cols-16 gap-x-5">
           <HeadShot />
           <div
-            className="transition-all max-md:mt-2 max-md:col-start-1 max-md:col-end-8
-              min-md:col-start-7 min-md:col-end-16"
+            className="transition-all max-md:col-span-full max-md:mt-2
+              min-md:col-start-7 min-md:col-span-10"
           >
             <SystemTimeGreeting />
             <FirstParagraphBio />
           </div>
-          <div className="max-md:col-start-1 max-md:col-end-8 col-start-2 col-end-16">
-            <SecondParagraphBio />
+          <div className="col-span-full">
+            <div className="mt-4">
+              <SecondParagraphBio />
+            </div>
             <PresentBio />
             <BeforeBio />
           </div>
