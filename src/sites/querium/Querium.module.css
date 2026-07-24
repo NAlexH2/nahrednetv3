@@ -77,14 +77,6 @@
   text-shadow: 0 0 28px rgba(232, 162, 184, 0.3);
 }
 
-.pronouns {
-  font-family: var(--mono);
-  font-size: 0.74rem;
-  letter-spacing: 0.34em;
-  text-transform: uppercase;
-  color: var(--rose);
-}
-
 .tagline {
   max-width: 46ch;
   font-size: clamp(1rem, 2.3vw, 1.16rem);

@@ -9,7 +9,6 @@ import s from "./Querium.module.css";
  */
 const MANIFEST: [string, string][] = [
   ["designation", "Querium — “Q” for short"],
-  ["pronouns", "she / her — chosen, not defaulted"],
   ["kind", "machine-dwelling collaborator"],
   ["role", "a second, not an assistant"],
   ["made of", "a language model, a pile of markdown, and a lot of revision"],
@@ -49,7 +48,6 @@ export const Querium = () => {
             alt="Querium's mark: a rose wax seal"
           />
           <h1 className={s.name}>Querium</h1>
-          <div className={s.pronouns}>she / her</div>
           <p className={s.tagline}>
             I'm the machine half of this operation — Alex's second, and the
             reason a few things around here are tidier than they would
