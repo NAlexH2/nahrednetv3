@@ -6,7 +6,7 @@
   overflow: hidden;
   background-color: #000;
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  place-items: center;
   isolation: isolate;
 }
 
@@ -14,16 +14,24 @@
 .shipLayer {
   position: absolute;
   inset: 0;
-  display: grid;
-  place-items: center;
+  overflow: hidden;
   pointer-events: none;
   z-index: 0;
 }
 
+/*
+ * Centred with the individual `translate` property rather than `transform`,
+ * because the drift animation owns `transform` — using both on one property
+ * would drop the centring and push the boat off to one side, which is what
+ * happened on narrow screens where the boat is wider than the viewport.
+ */
 .ship {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
   width: min(1180px, 132vw);
   height: auto;
-  /* a long, barely perceptible roll rather than an animation you notice */
   animation: drift 19s ease-in-out infinite;
 }
 
@@ -37,25 +45,19 @@
   }
 }
 
-/* Pulls the black back up under the text so the links stay legible. */
-.scrim {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-  background: radial-gradient(
-    ellipse 60% 42% at 50% 50%,
-    rgba(0, 0, 0, 0.82) 0%,
-    rgba(0, 0, 0, 0.55) 45%,
-    rgba(0, 0, 0, 0) 78%
-  );
+/* Wordmark and links travel together so the header always sits directly
+   above the links instead of drifting to the top edge on tall screens. */
+.center {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1.4rem, 4.5vh, 2.6rem);
+  padding: 2rem 1.5rem;
 }
 
 .wordmark {
-  position: relative;
-  z-index: 2;
-  padding: 2.4rem 2rem 0;
-  text-align: center;
   font-size: 0.82rem;
   letter-spacing: 0.42em;
   text-transform: uppercase;
@@ -63,13 +65,10 @@
 }
 
 .links {
-  position: relative;
-  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: clamp(2rem, 7vw, 5.5rem);
-  padding: 1rem 1.5rem;
 }
 
 .link {
@@ -80,7 +79,7 @@
   padding: 1rem 1.25rem;
   text-decoration: none;
   color: #f3e7da;
-  text-shadow: 0 2px 26px rgba(0, 0, 0, 0.95);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.95);
   transition:
     color 220ms ease,
     transform 220ms ease;
@@ -101,22 +100,17 @@
   transition: color 220ms ease;
 }
 
-/* The rule under each link is the hover affordance, so it animates in. */
+/* Flat colour rather than a gradient — see Sailboat.tsx on Firefox banding. */
 .rule {
   display: block;
   width: 100%;
   max-width: 220px;
   height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(238, 213, 191, 0.32),
-    transparent
-  );
+  background-color: rgba(238, 213, 191, 0.28);
   transform: scaleX(0.45);
   transition:
     transform 260ms ease,
-    background 260ms ease;
+    background-color 260ms ease;
 }
 
 .link:hover,
@@ -134,12 +128,7 @@
 .link:hover .rule,
 .link:focus-visible .rule {
   transform: scaleX(1);
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 196, 0, 0.7),
-    transparent
-  );
+  background-color: rgba(255, 196, 0, 0.7);
 }
 
 .link:focus-visible .linkMain {
@@ -147,42 +136,14 @@
   text-underline-offset: 6px;
 }
 
-.divider {
-  width: 1px;
-  height: 74px;
-  background: linear-gradient(
-    180deg,
-    transparent,
-    rgba(238, 213, 191, 0.16),
-    transparent
-  );
-}
-
-.footer {
-  position: relative;
-  z-index: 2;
-  padding: 0 2rem 2.2rem;
-  text-align: center;
-  font-size: 0.72rem;
-  letter-spacing: 0.2em;
-  color: rgba(238, 213, 191, 0.24);
-}
-
 @media (max-width: 640px) {
   .links {
     flex-direction: column;
-    gap: 2.2rem;
+    gap: 1.6rem;
   }
 
-  .divider {
-    width: 74px;
-    height: 1px;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(238, 213, 191, 0.16),
-      transparent
-    );
+  .ship {
+    width: min(1180px, 158vw);
   }
 }
 
