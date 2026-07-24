@@ -1,7 +1,7 @@
 
 # Table of Contents
 - [Table of Contents](#table-of-contents)
-- [underway.sh V3](#underwaysh-v3)
+- [underway.sh](#underwaysh-v3)
   - [Tech Stack Used](#tech-stack-used)
   - [About](#about)
   - [Why Vite?](#why-vite)
