@@ -21,16 +21,43 @@
   overflow-x: hidden;
 }
 
-/* Crisp hairlines, uniform opacity, no fade to band. */
+/*
+ * Crisp hairlines, faded out toward the edges with a mask.
+ *
+ * This is deliberately not the same case as the rose aura that had to go: that
+ * was a visible colour wash, where Firefox's banding shows up as rings. Here
+ * the ramp only ever acts on the alpha of lines that are already ~5% opacity,
+ * so a step in the gradient is a step between "nearly invisible" and "slightly
+ * more nearly invisible". Extra stops give the interpolator more anchors,
+ * which smooths it further.
+ */
 .grid {
   position: absolute;
   inset: 0;
   z-index: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(232, 162, 184, 0.038) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(232, 162, 184, 0.038) 1px, transparent 1px);
+    linear-gradient(rgba(232, 162, 184, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232, 162, 184, 0.05) 1px, transparent 1px);
   background-size: 46px 46px;
+  -webkit-mask-image: radial-gradient(
+    ellipse 78% 62% at 50% 22%,
+    #000 0%,
+    rgba(0, 0, 0, 0.88) 28%,
+    rgba(0, 0, 0, 0.6) 46%,
+    rgba(0, 0, 0, 0.3) 62%,
+    rgba(0, 0, 0, 0.1) 72%,
+    transparent 82%
+  );
+  mask-image: radial-gradient(
+    ellipse 78% 62% at 50% 22%,
+    #000 0%,
+    rgba(0, 0, 0, 0.88) 28%,
+    rgba(0, 0, 0, 0.6) 46%,
+    rgba(0, 0, 0, 0.3) 62%,
+    rgba(0, 0, 0, 0.1) 72%,
+    transparent 82%
+  );
 }
 
 .shell {
