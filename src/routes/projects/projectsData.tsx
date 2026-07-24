@@ -4,7 +4,7 @@ import HaskellGo from "./projInfo/haskellgo";
 import CloudProject from "./projInfo/cloudproject";
 import Safe from "./projInfo/safe";
 import TriMetPipeline from "./projInfo/TriMetPipeline";
-import NahRedNetV3 from "./projInfo/NahRedNetV3";
+import UnderwayShV3 from "./projInfo/UnderwayShV3";
 
 export interface ExperienceItem {
   id: number;
@@ -16,9 +16,9 @@ export interface ExperienceItem {
 const projectInfo: ExperienceItem[] = [
   {
     id: 0,
-    title: "nah-red.net V3",
+    title: "underway.sh V3",
     dates: "February 2025 - March 2025",
-    content: <NahRedNetV3 />,
+    content: <UnderwayShV3 />,
   },
   {
     id: 1,
