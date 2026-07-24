@@ -8,8 +8,20 @@ export const FirstParagraphBio = () => {
       <i>
         <b>Nicholas Alexander Harris,</b>
       </i>{" "}
-      though I prefer to go by my middle name, Alex. I&apos;m currently a
-      graduate student at{" "}
+      though I prefer to go by my middle name, Alex. I&apos;m a systems
+      administrator on the Live Ops team at{" "}
+      <Link
+        to="https://www.grindinggear.com/"
+        id={IDStyles.TextLink}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Grinding Gear Games
+      </Link>{" "}
+      in Auckland, New Zealand, where I help keep Path of Exile 1 and 2 online
+      and healthy. Before this I served eight years in the United States Navy,
+      then earned a Bachelor of Science and a Master of Science in Computer
+      Science at{" "}
       <Link
         to="https://www.pdx.edu/"
         id={IDStyles.TextLink}
@@ -18,8 +30,7 @@ export const FirstParagraphBio = () => {
       >
         Portland State University
       </Link>
-      , where I’m building on the foundation I established during my
-      undergraduate studies at the{" "}
+      , in the{" "}
       <Link
         to="https://www.pdx.edu/engineering/"
         id={IDStyles.TextLink}
@@ -28,8 +39,7 @@ export const FirstParagraphBio = () => {
       >
         Maseeh College of Engineering and Computer Science
       </Link>
-      . There, I earned a Bachelor of Science in Computer Science and a minor in
-      Mathematics.
+      , with a minor in Mathematics.
     </>
   );
 };

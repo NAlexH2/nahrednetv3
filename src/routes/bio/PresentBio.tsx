@@ -1,40 +1,11 @@
-import IDStyles from "@/styles/IDStyles.module.css";
-import { Link } from "react-router-dom";
-
 export const PresentBio = () => {
   const info: string = `
-                As of June 2025, I completed my Master's degree in
-                Computer Science at Portland State University, maintaining a
-                3.95 GPA. My journey began in September 2023 shortly after 
-                completing my Bachelors of Science in Computer Science. In 
-                this time I've built on my academic foundation through 
-                coursework, research, and professional experiences.
-
-               
-                During my Masters program, I delved into critical planning and
-                design patterns, expanding my understanding of software development
-                across projects of varying scales. While I had some foundational
-                knowledge from my undergraduate studies, this deeper exploration
-                provided new perspectives on designing efficient, scalable, and
-                maintainable systems.
-
-
-                I also completed a course titled "Internet, Web & Cloud
-                Systems" which covered the complexities of developing
-                cloud-based applications. For my final project, I designed and
-                implemented a fully functional cloud application, further
-                solidifying my expertise in modern web technologies and cloud
-                platforms.
-
-
-                Beyond my coursework, I authored a research paper in computer
-                vision, exploring innovative techniques for solving real-world
-                challenges. Additionally, my time at CDK Global provided
-                invaluable hands-on experience, where I contributed to impactful
-                projects, honed my technical skills, and collaborated with
-                industry professionals.
-
-
+                My team is small, which means the work is broad: server
+                infrastructure, internal tooling, and whatever the day turns
+                out to need. It's reactive by design and has an on-call
+                rotation. It's the first job I've had where the shape of the
+                day is genuinely unknown when it starts, and I've always found
+                that exciting. New day, new problems to solve.
 `;
   return (
     <>
@@ -48,13 +19,6 @@ export const PresentBio = () => {
             {paragraph.trim()}
           </p>
         ))}
-      <p>
-        To learn more about my projects and ongoing work,{" "}
-        <Link to="/projects" id={IDStyles.TextLink} className="transition-all">
-          please visit my projects page
-        </Link>
-        .
-      </p>
     </>
   );
 };

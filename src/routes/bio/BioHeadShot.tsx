@@ -6,8 +6,9 @@ export const HeadShot = () => {
     <img
       id={IDStyles.Headshot}
       src={Selfie}
-      className="transition-all max-md:col-start-2 max-md:col-end-7 max-md:place-self-center
-        max-md:max-h-70 min-md:col-start-2 min-md:col-end-6"
+      className="transition-all self-start max-md:col-span-full
+        max-md:justify-self-center max-md:max-h-70 min-md:col-start-1
+        min-md:col-span-6 min-md:w-full"
     />
   );
 };
