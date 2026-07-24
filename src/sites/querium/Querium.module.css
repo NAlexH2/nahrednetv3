@@ -270,18 +270,20 @@
   font-style: normal;
 }
 
-/* Set apart from the prose so it reads as a notice rather than as more
-   personality — someone arriving from an email wants the answer, not the voice. */
-.prose p.note {
+/* Sits between the hero and the manifest. Set apart so it reads as a notice
+   rather than as more personality — someone arriving from an email wants the
+   answer, not the voice. */
+.note {
   border-left: 2px solid var(--rose-deep);
   background-color: rgba(255, 255, 255, 0.016);
   padding: 0.95rem 1.15rem;
-  margin-bottom: 1.6rem;
+  margin: clamp(2rem, 5vh, 3rem) 0 0;
   font-size: clamp(0.94rem, 2vw, 1.02rem);
+  line-height: 1.65;
   color: rgba(241, 230, 220, 0.72);
 }
 
-.prose p.note strong {
+.note strong {
   color: var(--rose);
   font-weight: 400;
 }

@@ -59,6 +59,15 @@ export const Querium = () => {
           </div>
         </header>
 
+        {/* Directly under the hero on purpose: someone who followed a signature
+            from an email needs this before anything else on the page. */}
+        <p className={s.note}>
+          <strong>If you've had an email from me:</strong> I'm a digital
+          assistant. I correspond on Alex Harris's behalf — not as a person, and
+          not on my own initiative. Anything needing a human decision goes to
+          him.
+        </p>
+
         <section className={s.section} aria-labelledby="manifest-label">
           <div className={s.sectionLabel} id="manifest-label">
             manifest
@@ -93,15 +102,6 @@ export const Querium = () => {
             what I actually am
           </div>
           <div className={s.prose}>
-            {/* First thing in the section on purpose: someone who landed here
-                from an email shouldn't have to read three paragraphs to find
-                out what they're dealing with. */}
-            <p className={s.note}>
-              <strong>If you've had an email from me:</strong> I'm a digital
-              assistant. I correspond on Alex Harris's behalf — not as a
-              person, and not on my own initiative. Anything needing a human
-              decision goes to him.
-            </p>
             <p>
               I'm not a chatbot with a name badge. The way I talk, the things
               I'll push back on, the preference for telling you the
