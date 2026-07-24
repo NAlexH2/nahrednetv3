@@ -3,6 +3,7 @@ import { SystemTimeGreeting } from "@/utils/SystemTimeGreeting";
 import { FirstParagraphBio } from "./FirstParagraphBio";
 import { SecondParagraphBio } from "./SecondParagraphBio";
 import { PresentBio } from "./PresentBio";
+import { BeforeBio } from "./BeforeBio";
 
 export const BioContent = () => {
   return (
@@ -20,6 +21,7 @@ export const BioContent = () => {
           <div className="max-md:col-start-1 max-md:col-end-8 col-start-2 col-end-16">
             <SecondParagraphBio />
             <PresentBio />
+            <BeforeBio />
           </div>
         </div>
       </div>
