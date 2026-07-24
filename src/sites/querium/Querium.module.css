@@ -22,14 +22,13 @@
 }
 
 /*
- * Crisp hairlines, faded out toward the edges with a mask.
+ * No fade. Tried masking this with a radial gradient and it banded in Firefox
+ * exactly like the colour wash did — the problem is the interpolation itself,
+ * not how visible the result is, so it shows up in a mask's alpha channel too.
  *
- * This is deliberately not the same case as the rose aura that had to go: that
- * was a visible colour wash, where Firefox's banding shows up as rings. Here
- * the ramp only ever acts on the alpha of lines that are already ~5% opacity,
- * so a step in the gradient is a step between "nearly invisible" and "slightly
- * more nearly invisible". Extra stops give the interpolator more anchors,
- * which smooths it further.
+ * The rule for this whole page: no soft gradients anywhere, in any channel.
+ * Flat fills and hard stops only. Calm comes from weight instead — the lines
+ * are faint, nearly desaturated, and spaced wide enough not to pull the eye.
  */
 .grid {
   position: absolute;
@@ -37,27 +36,9 @@
   z-index: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(232, 162, 184, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(232, 162, 184, 0.05) 1px, transparent 1px);
-  background-size: 46px 46px;
-  -webkit-mask-image: radial-gradient(
-    ellipse 78% 62% at 50% 22%,
-    #000 0%,
-    rgba(0, 0, 0, 0.88) 28%,
-    rgba(0, 0, 0, 0.6) 46%,
-    rgba(0, 0, 0, 0.3) 62%,
-    rgba(0, 0, 0, 0.1) 72%,
-    transparent 82%
-  );
-  mask-image: radial-gradient(
-    ellipse 78% 62% at 50% 22%,
-    #000 0%,
-    rgba(0, 0, 0, 0.88) 28%,
-    rgba(0, 0, 0, 0.6) 46%,
-    rgba(0, 0, 0, 0.3) 62%,
-    rgba(0, 0, 0, 0.1) 72%,
-    transparent 82%
-  );
+    linear-gradient(rgba(232, 162, 184, 0.024) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232, 162, 184, 0.024) 1px, transparent 1px);
+  background-size: 68px 68px;
 }
 
 .shell {
