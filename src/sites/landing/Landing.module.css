@@ -1,0 +1,199 @@
+.page {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  isolation: isolate;
+}
+
+/* The ship sits behind everything and never takes a click. */
+.shipLayer {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ship {
+  width: min(1180px, 132vw);
+  height: auto;
+  /* a long, barely perceptible roll rather than an animation you notice */
+  animation: drift 19s ease-in-out infinite;
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-0.35deg);
+  }
+  50% {
+    transform: translate3d(0, -10px, 0) rotate(0.35deg);
+  }
+}
+
+/* Pulls the black back up under the text so the links stay legible. */
+.scrim {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(
+    ellipse 60% 42% at 50% 50%,
+    rgba(0, 0, 0, 0.82) 0%,
+    rgba(0, 0, 0, 0.55) 45%,
+    rgba(0, 0, 0, 0) 78%
+  );
+}
+
+.wordmark {
+  position: relative;
+  z-index: 2;
+  padding: 2.4rem 2rem 0;
+  text-align: center;
+  font-size: 0.82rem;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: rgba(238, 213, 191, 0.42);
+}
+
+.links {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(2rem, 7vw, 5.5rem);
+  padding: 1rem 1.5rem;
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 1rem 1.25rem;
+  text-decoration: none;
+  color: #f3e7da;
+  text-shadow: 0 2px 26px rgba(0, 0, 0, 0.95);
+  transition:
+    color 220ms ease,
+    transform 220ms ease;
+}
+
+.linkMain {
+  font-size: clamp(1.35rem, 3.4vw, 2.15rem);
+  letter-spacing: 0.06em;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.linkSub {
+  font-size: clamp(0.66rem, 1.5vw, 0.78rem);
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: rgba(238, 213, 191, 0.55);
+  transition: color 220ms ease;
+}
+
+/* The rule under each link is the hover affordance, so it animates in. */
+.rule {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(238, 213, 191, 0.32),
+    transparent
+  );
+  transform: scaleX(0.45);
+  transition:
+    transform 260ms ease,
+    background 260ms ease;
+}
+
+.link:hover,
+.link:focus-visible {
+  color: var(--honey, rgb(255, 196, 0));
+  transform: translateY(-3px);
+  outline: none;
+}
+
+.link:hover .linkSub,
+.link:focus-visible .linkSub {
+  color: rgba(255, 196, 0, 0.75);
+}
+
+.link:hover .rule,
+.link:focus-visible .rule {
+  transform: scaleX(1);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 196, 0, 0.7),
+    transparent
+  );
+}
+
+.link:focus-visible .linkMain {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.divider {
+  width: 1px;
+  height: 74px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(238, 213, 191, 0.16),
+    transparent
+  );
+}
+
+.footer {
+  position: relative;
+  z-index: 2;
+  padding: 0 2rem 2.2rem;
+  text-align: center;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  color: rgba(238, 213, 191, 0.24);
+}
+
+@media (max-width: 640px) {
+  .links {
+    flex-direction: column;
+    gap: 2.2rem;
+  }
+
+  .divider {
+    width: 74px;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(238, 213, 191, 0.16),
+      transparent
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ship {
+    animation: none;
+  }
+
+  .link,
+  .rule,
+  .linkSub {
+    transition: none;
+  }
+}

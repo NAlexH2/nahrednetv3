@@ -1,0 +1,320 @@
+.page {
+  --rose: #e8a2b8;
+  --rose-deep: #c2607e;
+  --ink: #f1e6dc;
+  --muted: rgba(241, 230, 220, 0.52);
+  --faint: rgba(241, 230, 220, 0.26);
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: #000;
+  color: var(--ink);
+  overflow-x: hidden;
+  isolation: isolate;
+}
+
+/* A machine's floor: present, not loud. Faded out at the edges so it never
+   competes with the text sitting on top of it. */
+.grid {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(232, 162, 184, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232, 162, 184, 0.055) 1px, transparent 1px);
+  background-size: 46px 46px;
+  mask-image: radial-gradient(ellipse 78% 62% at 50% 22%, #000 20%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 78% 62% at 50% 22%, #000 20%, transparent 75%);
+}
+
+.aura {
+  position: absolute;
+  top: -22vh;
+  left: 50%;
+  translate: -50% 0;
+  width: min(1000px, 120vw);
+  height: min(1000px, 120vw);
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle,
+    rgba(194, 96, 126, 0.16) 0%,
+    rgba(194, 96, 126, 0.06) 34%,
+    transparent 66%
+  );
+  animation: breathe 11s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    opacity: 0.75;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+}
+
+.shell {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: clamp(3rem, 9vh, 6rem) clamp(1.25rem, 5vw, 2.5rem) 4rem;
+}
+
+/* ---------- hero ---------- */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.1rem;
+}
+
+.seal {
+  width: clamp(112px, 20vw, 158px);
+  height: auto;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 26px rgba(232, 162, 184, 0.34));
+}
+
+.name {
+  font-size: clamp(2.6rem, 8vw, 4.4rem);
+  letter-spacing: 0.14em;
+  line-height: 1;
+  margin: 0.4rem 0 0;
+  background: linear-gradient(180deg, var(--ink) 0%, var(--rose) 165%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.pronouns {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--rose);
+}
+
+.tagline {
+  max-width: 46ch;
+  font-size: clamp(1rem, 2.3vw, 1.16rem);
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+/* ---------- live status ---------- */
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid rgba(232, 162, 184, 0.22);
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--rose);
+  box-shadow: 0 0 10px var(--rose);
+  animation: pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(0.82);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ---------- manifest ---------- */
+
+.section {
+  margin-top: clamp(3rem, 8vh, 5rem);
+}
+
+.sectionLabel {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.36em;
+  text-transform: uppercase;
+  color: var(--rose-deep);
+  margin-bottom: 1.2rem;
+}
+
+.manifest {
+  position: relative;
+  border: 1px solid rgba(232, 162, 184, 0.16);
+  border-left: 2px solid var(--rose-deep);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.016);
+  padding: 1.35rem clamp(1rem, 3vw, 1.75rem);
+  overflow: hidden;
+}
+
+/* A slow read-head passing over the block. */
+.manifest::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(232, 162, 184, 0.07) 50%,
+    transparent 100%
+  );
+  height: 42%;
+  animation: sweep 7.5s linear infinite;
+}
+
+@keyframes sweep {
+  0% {
+    transform: translateY(-110%);
+  }
+  100% {
+    transform: translateY(280%);
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 8.5rem) 1fr;
+  gap: 0.75rem 1.25rem;
+  padding: 0.42rem 0;
+  font-family: var(--mono);
+  font-size: 0.83rem;
+  line-height: 1.5;
+}
+
+.key {
+  color: var(--rose);
+  letter-spacing: 0.08em;
+}
+
+.val {
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+/* ---------- prose ---------- */
+
+.prose p {
+  font-size: clamp(1rem, 2.2vw, 1.1rem);
+  line-height: 1.75;
+  color: rgba(241, 230, 220, 0.8);
+  margin: 0 0 1.1rem;
+}
+
+.prose em {
+  color: var(--rose);
+  font-style: normal;
+}
+
+/* ---------- principles ---------- */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid rgba(241, 230, 220, 0.09);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.015);
+  padding: 1.35rem 1.3rem;
+  transition:
+    border-color 260ms ease,
+    transform 260ms ease,
+    box-shadow 260ms ease;
+}
+
+.card:hover {
+  border-color: rgba(232, 162, 184, 0.38);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 40px rgba(194, 96, 126, 0.12);
+}
+
+.cardTitle {
+  font-size: 1.02rem;
+  letter-spacing: 0.03em;
+  color: var(--ink);
+  margin-bottom: 0.55rem;
+}
+
+.cardBody {
+  font-size: 0.93rem;
+  line-height: 1.62;
+  color: var(--muted);
+}
+
+/* ---------- footer ---------- */
+
+.footer {
+  margin-top: clamp(3.5rem, 9vh, 5.5rem);
+  padding-top: 1.6rem;
+  border-top: 1px solid rgba(241, 230, 220, 0.08);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.75rem;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+}
+
+.footer a {
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition:
+    color 200ms ease,
+    border-color 200ms ease;
+}
+
+.footer a:hover,
+.footer a:focus-visible {
+  color: var(--rose);
+  border-bottom-color: var(--rose);
+  outline: none;
+}
+
+.sig {
+  color: var(--faint);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aura,
+  .pulse,
+  .manifest::after {
+    animation: none;
+  }
+
+  .card {
+    transition: none;
+  }
+}
