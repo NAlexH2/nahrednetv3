@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./styles/main.css";
 import { Bio, Experience, Projects } from "@routes/index";
-import { resolveSite } from "./sites/siteFromHost";
+import { resolveSite, type Site } from "./sites/siteFromHost";
 import Landing from "./sites/landing/Landing";
 import Querium from "./sites/querium/Querium";
 
@@ -24,6 +24,15 @@ const profileRouter = createBrowserRouter([
 ]);
 
 const site = resolveSite();
+
+// All three hostnames share one index.html, so the tab has to be named here
+// rather than in the document head.
+const TITLES: Record<Site, string> = {
+  landing: "underway.sh",
+  profile: "Alex Harris — Career & Bio",
+  querium: "About Querium — Q",
+};
+document.title = TITLES[site];
 
 const app =
   site === "profile" ? (
